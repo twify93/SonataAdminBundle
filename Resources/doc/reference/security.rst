@@ -111,15 +111,16 @@ The permissions are:
 
 ==========   ==================================================
 Permission   Description
-==========   ==================================================
+==========   ==================================================
 LIST         view the list of objects
 VIEW         view the detail of one object
 CREATE       create a new object
 EDIT         update an existing object
 DELETE       delete an existing object
 EXPORT       (for the native Sonata export links)
-ALL          grants LIST, VIEW, CREATE, EDIT, DELETE and EXPORT
-==========   ==================================================
+ALL          grants LIST, VIEW, CREATE, EDIT, DELETE, EXPORT and any other role you've added to the admin's `$accessMapping` property
+MASTER       ?
+==========   ==================================================
 
 Each permission is relative to an admin: if you try to get a list in FooAdmin (declared as ``app.admin.foo``
 service), Sonata will check if the user has the ``ROLE_APP_ADMIN_FOO_EDIT`` or ``ROLE_APP_ADMIN_FOO_ALL`` roles.
